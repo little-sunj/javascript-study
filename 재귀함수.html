@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+//재귀함수
+//내가 나를 호출
+//반복문과 재귀
+
+//반복문
+let s = 0;
+for (var i =0; i<101; i++) {
+    s += i;
+}
+console.log(s);
+//O(n) : n에 비례 
+
+let n = 100;
+console.log(n*(n+1)/2);
+//O(1) 
+
+
+
+
+
+function f(n) {
+    if(n<=1) {
+        return 1;
+    }
+    return n+f(n-1);
+}
+console.log(`재귀함수 : ${f(100)}`);
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+/*
+set() - 객체. 값 콜렉션 
+자료형에 관계없이 원시값과 객체 참조 모두 유일한 값을 저장할 수 있다.
+하나의 set내 값은 한번만 나타날 수 있다. 
+즉, 어떤 값은 그 set콜렉션 내에서 유일하다.
+
+set내의 값은 유일해야 하기 때문에 값이 같은지 검사를 수행한다.
+NaN과 undefined도 set에 저장할 수 있다.
+
+원래 NaN !== NaN 이지만, set에서 NaN은 NaN과 같은 것으로 간주한다.
+*/
+
+let s = new Set('abcdeeeeeeee');
+//어떤 문자열에서 중복값을 제외한 길이를 알고싶을때 유용
+console.log(s.size);
+
+s.add('f');
+console.log(s);
+
+for (var variable of s) {
+    console.log(variable);
+}
+
+
+//split을 통해 array로 넣어줄경우
+let ss = new Set('abcdeeeeeeee'.split(''));
+console.log(ss);
+
+ss.delete('b')
+console.log(ss);
+console.log(ss.has('a'));
+//ss.clear
+
+</script>
+
+
+</body>
+</html>

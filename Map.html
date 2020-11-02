@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document</title>
+</head>
+<body>
+
+<script>
+
+    /*
+    Map : 객체. key, value 형태로 저장.
+    key의 입력 순서도 기억한다.
+
+    for ..of 루프시 [key, value] 형태로 반환한다.
+
+    */
+
+    let m = new Map();
+    m.set('하나', '1');
+    m.set(1, '하나');
+    m.set(true, 1);
+    m.set(false, 0);
+
+    console.log(m.get('하나'));
+    console.log(m.get(true));
+    console.log(m.has(true));
+    console.log(m.delete('하나'));
+    console.log(m.has('하나'));
+
+    console.log(m);
+    console.log(m.size);
+
+    for (var i of m) {
+        console.log(`m을 순회하고 있습니다. ${i}`);
+        console.log(`m을 순회하고 있습니다. ${i[0]}`);
+        console.log(`m을 순회하고 있습니다. ${i[1]}`);
+    }
+
+
+
+    console.log(m.keys());
+    console.log(m.values());
+    console.log(m.entries());
+    
+    
+
+
+</script>
+
+
+</body>
+</html>
